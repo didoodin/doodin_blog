@@ -2,6 +2,7 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import Main from "../components/main/Main";
 import Detail from "../components/detail/Detail";
+import List from "../components/main/List";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       </div>
 
       <div>
-        <Detail />
+        <Main />
       </div>
 
       <div className="w-full">
