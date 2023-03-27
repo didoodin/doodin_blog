@@ -1,4 +1,4 @@
-import Category from "../common/Category";
+import Category from "../../pages/sub/category";
 import Avatar from "../main/Avatar";
 
 export default function ResumeBody({children}) {
