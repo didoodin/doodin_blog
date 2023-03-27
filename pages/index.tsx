@@ -4,6 +4,7 @@ import Category from "../components/common/Category";
 import { posts } from '../lib/notion'
 import { useRouter } from "next/router";
 import { useEffect } from 'react';
+import type { NextPage } from "next";
 
 // 서버 측에서 노션 게시물을 가져옴
 export async function getServerSideProps() {
@@ -41,8 +42,7 @@ const Home = ( props: any ) => {
         <div className="px-6">
           <div className="pb-20 md:grid md:grid-cols-6 md:gap-10 flex-row-reverse">
             <div className="col-span-4 lg:col-span-5 mt-6 sm:mt-0 bg-white rounded-xl p-3">
-              
-              {props.posts.map((res, i) => {
+              {props && props.posts.map((res, i) => {
                 <Card>
                   <Link href={"/sub/detail"} key={i}>
                     <div className="flex gap-2">
@@ -54,7 +54,9 @@ const Home = ( props: any ) => {
                         </div>
                         <div className="mt-2 mb-1">
                           <span className="text-gray-600 font-bold text-lg">
-                          {res.posts[i].properties.title.rich_text[i].plain_text}
+                            {
+                              res.posts
+                            }
                           </span>
                         </div>
                         <div className="mt-1 mb-1">
@@ -73,7 +75,6 @@ const Home = ( props: any ) => {
                   </Link>
                 </Card>;
               })}
-
             </div>
             <div className="col-span-2 lg:col-span-1 mt-16 md:mt-0 md:sticky md:top-10 md:self-start space-y-10 md:space-y-6">
               <Category />
