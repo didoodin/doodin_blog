@@ -1,5 +1,6 @@
 import Card from "./Card";
 import Link from 'next/link';
+import { posts } from '../../lib/notion';
 
 export default function List() {
     return (

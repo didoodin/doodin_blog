@@ -4,12 +4,6 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Datail() {
-  useEffect(() => {
-      fetch(process.env.LOCAL_API_URL)
-  })
-
-  const router = useRouter();
-  
     return (
       <Body>
         <div className="px-6">

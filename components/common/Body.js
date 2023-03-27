@@ -1,4 +1,4 @@
-import Category from "../common/Category";
+import Category from "./Category";
 
 export default function Body({children}) {
     return (

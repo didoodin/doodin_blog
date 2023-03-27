@@ -1,5 +1,5 @@
 import Body from "../common/Body";
-import List from "../main/List";
+import List from "./List";
 
 export default function Main() {
     return (
