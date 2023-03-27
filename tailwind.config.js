@@ -8,10 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blogBg: '#F5F7FB',
-        blogColor: '#02A5E9',
-        textColor: '#A3A3A3',
-        categoryTech: ''
+        blogBg: '#E0643E',
+        blogColor: '#4AB18A',
+        textColor: '#333',
+        dateColor: 'rgb(107 114 128 / var(--tw-text-opacity))',
+        pointColor: '#5316BD',
+        categoryTech: '',
+        categoryTest: '',
+        categoryLife: ''
       }
     },
   },
