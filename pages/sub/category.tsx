@@ -24,7 +24,6 @@ export default function getCategory() {
       <h2 className="text-white mb-3 text-xs">카테고리</h2>
       {categories.map((category) => (
         <Category
-          category_id = {category.category_id}
           category_nm = {category.category_nm}
           category_url = {category.category_url}
           key = {category.category_id}
