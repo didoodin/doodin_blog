@@ -1,28 +1,35 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useState } from 'react';
 import { supabase } from "../../lib/supabase";
+import Category from "../../components/common/Category";
 
-const Category = (props: any) => {
+export default function getCategory() {
+  const [categories, setCategories] = useState([]);
 
-  // rendering check 1
   useEffect(() => {
-    console.log('handler success')
-  }, [])
-  
-  // rendering check 2
-  if (props) 
+    supabase
+      .from('category')
+      .select()
+      .then((result) => {
+        console.log(result);
+
+        if (result.error) console.log(result.error);
+
+        setCategories(result.data);
+      });
+  }, []);
 
   return (
     <div className="px-4 py-2">
       <h2 className="text-white mb-3 text-xs">Category</h2>
-      {props.categories && props.categories.map((res, i) => {
-        return (
-          <a href="" className="flex gap-3 py-3 text-white" key={i}>
-            {res.category_nm}
-          </a>
-        );
-      })}
+      {categories.map((category) => (
+        <Category
+          category_id={category.category_id}
+          category_nm={category.category_nm}
+          category_url={category.category_url}
+          key={category.category_id}
+        ></Category>
+      ))}
     </div>
   );
 };
-
-export default Category;
