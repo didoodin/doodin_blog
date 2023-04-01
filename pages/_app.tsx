@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className="container mx-auto">
       <Header />
-      <Component {...pageProps} />
+      <Component {...pageProps}  />
       <Footer />
     </div>
   );

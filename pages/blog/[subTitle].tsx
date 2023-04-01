@@ -1,9 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import Body from "../../components/common/Body";
 import DetailHeader from "../../components/detail/DetailHeader";
 import { supabase } from "../../lib/supabase";
+import Category from "../sub/category";
 
 const Detail = ({ data }) => {
   let content = data[0].content;
