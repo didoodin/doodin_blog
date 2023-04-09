@@ -20,7 +20,7 @@ export default function getCategory() {
   }, []);
 
   return (
-    <div className="px-4 py-2">
+    <div className="pt-6 pb-4 py-2 w-48">
       <h2 className="text-white mb-3 text-xs">카테고리</h2>
       {categories.map((category) => (
         <Category

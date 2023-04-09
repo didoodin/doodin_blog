@@ -25,9 +25,6 @@ export default function ResumeBody({children}) {
                   </div>
                 </div>
               </div>
-              <div className="col-span-2 lg:col-span-1 mt-16 md:mt-0 md:sticky md:top-10 md:self-start space-y-10 md:space-y-6">
-                <Category />
-              </div>
             </div>
           </div>
         </div>

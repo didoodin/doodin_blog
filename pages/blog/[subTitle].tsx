@@ -4,7 +4,6 @@ import DetailHeader from "../../components/detail/DetailHeader";
 import { supabase } from "../../lib/supabase";
 
 const Detail = ({ data }) => {
-  let content = data[0].content;
 
   return (
     <div className="container mx-auto">
@@ -17,7 +16,7 @@ const Detail = ({ data }) => {
                 <div className="prose prose-base prose-cyan w-full max-w-full prose-a:!text-cyan-500 prose-a:underline-offset-[3px] md:prose-lg nuxt-content">
                   <p
                     className="text-lg my-4"
-                    dangerouslySetInnerHTML={{ __html: content }}
+                    dangerouslySetInnerHTML={{ __html: data[0].content }}
                   ></p>
                 </div>
                 <div className="bg-gray-700 bg-opacity-40 w-full h-px my-4 mt-20 mb-10"></div>
