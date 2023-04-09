@@ -13,9 +13,9 @@ module.exports = {
         textColor: '#333',
         dateColor: 'rgb(107 114 128 / var(--tw-text-opacity))',
         pointColor: '#5316BD',
-        categoryTech: '',
-        categoryTest: '',
-        categoryLife: ''
+        devColor: '#4AB18A',
+        testColor: '#168FBE',
+        lifeColor: '#5316bE',
       }
     },
   },

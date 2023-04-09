@@ -11,7 +11,7 @@ const Post = ({ categoryId, title, subTitle, content, regDt }) => {
         <div className="flex gap-2">
           <div className="w-full">
             <div className="mt-1 mb-1">
-              <p className="w-14 py-1 rounded-full text-center text-xs font-semibold bg-blogColor text-white">
+              <p className={`${categoryId == 'DEV' ? 'bg-devColor' : categoryId == 'TEST' ? 'bg-testColor' : 'bg-lifeColor'} w-14 py-1 rounded-full text-center text-xs font-semibold text-white`}>
                 {categoryId}
               </p>
             </div>

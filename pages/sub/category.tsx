@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
 import Category from "../../components/common/Category";
 
@@ -8,7 +8,7 @@ export default function getCategory() {
 
   useEffect(() => {
     supabase
-      .from('category')
+      .from("category")
       .select()
       .then((result) => {
         console.log(result);
@@ -24,11 +24,11 @@ export default function getCategory() {
       <h2 className="text-white mb-3 text-xs">카테고리</h2>
       {categories.map((category) => (
         <Category
-          category_nm = {category.category_nm}
-          category_url = {category.category_url}
-          key = {category.category_id}
+          categoryId={category.category_id}
+          categoryNm={category.category_nm}
+          key={category.category_id}
         ></Category>
       ))}
     </div>
   );
-};
+}

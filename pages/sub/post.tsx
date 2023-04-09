@@ -23,12 +23,12 @@ export default function getPost() {
     <div className="col-span-4 lg:col-span-5 mt-6 sm:mt-0 bg-white rounded-xl p-3">
       {posts.slice(0, 10).map((post) => (
         <Post
-          categoryId = {post.category_id}
-          title = {post.title}
-          subTitle = {post.sub_title}
-          content = {post.content}
-          regDt = {post.reg_dt}
-          key = {post.post_id}
+          categoryId={post.category_id}
+          title={post.title}
+          subTitle={post.sub_title}
+          content={post.content}
+          regDt={post.reg_dt}
+          key={post.post_id}
         ></Post>
       ))}
     </div>

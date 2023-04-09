@@ -1,11 +1,14 @@
 import Link from "next/link";
 
-const Category = ({ category_nm, category_url }) => {
+const Category = ({ categoryId, categoryNm }) => {
   return (
-    <Link href="/blog/{category_url}" className="flex gap-3 py-3 text-white">
-      {category_nm}
+    <Link
+      href={`/blog/category/${categoryId}`}
+      className="flex gap-3 py-3 text-white"
+    >
+      {categoryNm}
     </Link>
-  )
-}
+  );
+};
 
-export default Category
+export default Category;

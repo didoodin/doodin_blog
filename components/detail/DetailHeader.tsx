@@ -1,9 +1,10 @@
 const DetailHeader = ({ title, regDt }) => {
+  let date = formatDate(regDt);
   return (
     <header className="mt-10 mb-10">
       <div className="flex flex-col items-center">
         <p className="text-center text-sm font-semibold text-gray-400 md:text-sm">
-          <time>{regDt}</time>
+          <time>{date}</time>
         </p>
         <h1 className="mt-4 max-w-[18rem] text-center text-2xl font-extrabold tracking-tight text-black-500 md:max-w-full md:text-3xl">
           {title}
@@ -56,6 +57,12 @@ const DetailHeader = ({ title, regDt }) => {
       </div>
     </header>
   );
+};
+
+export const formatDate = (date) => {
+  let moment = require("moment");
+  const formatDate = moment(date).format("YYYY년 MM월 DD일");
+  return formatDate;
 };
 
 export default DetailHeader;
